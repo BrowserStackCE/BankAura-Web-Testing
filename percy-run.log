@@ -1,0 +1,264 @@
+Heads up! The next major version of @percy/cli will require Node 20+. Either pin @percy/cli to its current major version, or make sure your setup runs on Node 20+, before the next major release.
+[percy:config] Config file not found (0ms)
+[percy:cli:exec] Automate project — baseline seeding does not apply (the first run establishes the baseline) (12ms)
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":39.29471032745592,"cgroupExists":false} (1076ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":79.56905364990234,"totalMemory":8589934592} (24ms)
+[percy:monitoring] Started monitoring system metrics (0ms)
+[percy:monitoring] [Operating System] Platform: darwin, Type: Darwin, Release: 24.5.0 (90ms)
+[percy:monitoring] [CPU] Name: Apple M2 (0ms)
+[percy:monitoring] [CPU] Arch: arm64, cores: 8 (0ms)
+[percy:monitoring] [Disk] Available Space: 39.31 gb (0ms)
+[percy:monitoring] [Memory] Total: 8 gb, Swap Space: 7 gb (0ms)
+[percy:monitoring] Container Level: false, Pod Level: false, Machine Level: true (0ms)
+[percy:monitoring] Percy Envs: PERCY_LOGLEVEL, PERCY_BUILD_SOURCE (0ms)
+[percy:core] Notice: Percy collects CI logs to improve service and enhance your experience. These logs help us debug issues and provide insights on your dashboards, making it easier to optimize the product experience. Logs are stored securely for 30 days. You can opt out anytime with export PERCY_CLIENT_ERROR_LOGS=false, but keeping this enabled helps us offer the best support and features. (0ms)
+[percy:client] Creating a new build... (0ms)
+[percy:env] Detected ci as "CI/unknown" (0ms)
+[percy:env] Detected commit as null (0ms)
+[percy:env] Detected branch as null (1ms)
+[percy:env] Detected git as {"sha":null,"branch":null,"message":null,"authorName":null,"authorEmail":null,"committedAt":null,"committerName":null,"committerEmail":null} (72ms)
+[percy:env] Detected target as {"commit":null,"branch":null} (1ms)
+[percy:env] Detected pullRequest as null (0ms)
+[percy:env] Detected parallel as {"total":null,"nonce":null} (0ms)
+[percy:env] Detected partial as false (0ms)
+[percy:env] Detected testhubBuildUuid as null (0ms)
+[percy:env] Detected testhubBuildRunId as null (0ms)
+[percy:env] Detected forcedPkgValue as null (0ms)
+[percy:env] Detected info as "CI/unknown" (0ms)
+[percy:client:proxy] Proxying request: https://percy.io:443 (3ms)
+[percy:timer] client:post - Unknown - 0.8s (797ms)
+[percy:core:queue] snapshot queueInfo: {"queued":0,"pending":0,"total":0} (0ms)
+[percy:core:queue] snapshot queueInfo: {"queued":0,"pending":0,"total":0} (1ms)
+[percy:core] Percy has started! (3ms)
+[percy:cli:exec] Running "npx browserstack-node-sdk playwright test -g Visual snapshots" (0ms)
+2026-11-17 08:04:00 - [32minfo[39m: Reading configs from /Users/yashchavan/Desktop/Coding/Roche Onsite/browserstack.yml
+2026-11-17 08:04:00 - [32minfo[39m: Log Directory has been set to /Users/yashchavan/Desktop/Coding/Roche Onsite/log
+2026-11-17 08:04:00 - [32minfo[39m: Running SDK with args /Users/yashchavan/.nvm/versions/node/v24.14.1/bin/node /Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/.bin/browserstack-node-sdk playwright test -g Visual snapshots
+2026-11-17 08:04:00 - [32minfo[39m: SDK run started with id: cd342549-66f1-4b1e-9bff-62cdab70b466
+2026-11-17 08:04:00 - [32minfo[39m: Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2026-11-17 08:04:01 - [32minfo[39m: [BrowserstackCLI] startMain: Starting main process
+2026-11-17 08:04:01 - [32minfo[39m: [CLIUtils] Current CLI Path Found: /Users/yashchavan/.browserstack/cli/binary-macos-arm64
+2026-11-17 08:04:02 - [32minfo[39m: [BrowserstackCLI] spawning command='/Users/yashchavan/.browserstack/cli/binary-macos-arm64,sdk'
+2026-11-17 08:04:03 - [31merror[39m: [BrowserstackCLI] CLI stderr: (node:23479) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `binary-macos-arm64 --trace-warnings ...` to show where the warning was created)
+2026-11-17 08:04:03 - [32minfo[39m: [BrowserstackCLI] CLI params loaded: {"id":"17771cd7-3b90-4184-a60e-749dada6fc71","listen":"unix:/tmp/sdk-platform-17771cd7-3b90-4184-a60e-749dada6fc71.sock"}
+2026-11-17 08:04:03 - [32minfo[39m: [GrpcClient] Connected to gRPC server at unix:/tmp/sdk-platform-17771cd7-3b90-4184-a60e-749dada6fc71.sock
+2026-11-17 08:04:03 - [32minfo[39m: [GrpcClient] Initialized gRPC client with bin session id: 17771cd7-3b90-4184-a60e-749dada6fc71 and listen address: unix:/tmp/sdk-platform-17771cd7-3b90-4184-a60e-749dada6fc71.sock
+2026-11-17 08:04:03 - [32minfo[39m: [GrpcClient] startBinSession: Calling startBinSession
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":27.97992471769134,"cgroupExists":false} (5098ms)
+2026-11-17 08:04:03 - [32minfo[39m: [GrpcClient] setCliArgs: cliArgs=["playwright","test","-g","Visual snapshots"], parsedConfig=[]
+[percy:monitoring] memoryInfo: {"currentUsagePercent":79.68673706054688,"totalMemory":8589934592} (31ms)
+2026-11-17 08:04:04 - [32minfo[39m: [GrpcClient] StartBinSession successful
+2026-11-17 08:04:04 - [32minfo[39m: [BrowserstackCLI] loadModules: Loading modules
+2026-11-17 08:04:04 - [32minfo[39m: [BrowserstackCLI] loadModules: binSessionId=17771cd7-3b90-4184-a60e-749dada6fc71
+2026-11-17 08:04:04 - [32minfo[39m: [BrowserstackCLI] loading Modules.
+2026-11-17 08:04:04 - [32minfo[39m: [BrowserstackCLI] setCliArgs: cliArgs=["playwright","test","-g","Visual snapshots"]
+2026-11-17 08:04:04 - [32minfo[39m: [BrowserstackCLI] Accessibility success=false
+2026-11-17 08:04:04 - [33mwarn[39m: SDK-GEN-004: [ClientTroubleShootingService] The environment variable(s) GLOBAL_AGENT_HTTP_PROXY are internally used by the BrowserStack SDK. Please use a different environment variable name, or contact BrowserStack support if you need assistance.
+2026-11-17 08:04:04 - [33mwarn[39m: SDK-GEN-004: [ClientTroubleShootingService] The environment variable(s) GLOBAL_AGENT_NO_PROXY are internally used by the BrowserStack SDK. Please use a different environment variable name, or contact BrowserStack support if you need assistance.
+2026-11-17 08:04:06 - [32minfo[39m: [BrowserstackCLI] Starting as child process with session ID: 17771cd7-3b90-4184-a60e-749dada6fc71
+2026-11-17 08:04:06 - [32minfo[39m: [GrpcClient] Connected to gRPC server at unix:/tmp/sdk-platform-17771cd7-3b90-4184-a60e-749dada6fc71.sock
+2026-11-17 08:04:06 - [32minfo[39m: [GrpcClient] Connecting bin session
+2026-11-17 08:04:06 - [32minfo[39m: [GrpcClient] ConnectBinSession successful
+2026-11-17 08:04:06 - [32minfo[39m: [BrowserstackCLI] loadModules: Loading modules
+2026-11-17 08:04:06 - [32minfo[39m: [BrowserstackCLI] loadModules: binSessionId=17771cd7-3b90-4184-a60e-749dada6fc71
+2026-11-17 08:04:06 - [32minfo[39m: [BrowserstackCLI] loading Modules.
+2026-11-17 08:04:06 - [32minfo[39m: [BrowserstackCLI] Accessibility success=false
+2026-11-17 08:04:06 - [32minfo[39m: [GrpcClient] Getting Playwright config
+2026-11-17 08:04:06 - [32minfo[39m: [GrpcClient] PlaywrightConfig request successful
+2026-11-17 08:04:06 - [33mwarn[39m: [modifyPlaywrightConf] Playwright "video" and "trace" recording are not supported over BrowserStack remote sessions and have been disabled to prevent run failures. Session video is available on the BrowserStack Automate dashboard. The "screenshot" option is unaffected.
+
+Running 1 test using 1 worker
+
+2026-11-17 08:04:07 - [32minfo[39m: Setting up TestInfo directory at /Users/yashchavan/Desktop/Coding/Roche Onsite/log/.obs_test_details-p4cxgcljxpzo6w28rz8zs942bamaq9qzonoimwgr
+2026-11-17 08:04:07 - [32minfo[39m: [PlaywrightTestFramework] trackPlaywrightInstance: created instance for target=23590:0, state=TestFrameworkState.INIT_TEST
+2026-11-17 08:04:07 - [32minfo[39m: [PlaywrightTestFramework] trackPlaywrightInstance: saved instance contextId=6e05012bacd74be23ee90921f1b9502c5dd178581fb6f5fcdd1993e485b41a7d target=23590:0
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":35.050251256281406,"cgroupExists":false} (4947ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":81.50043487548828,"totalMemory":8589934592} (19ms)
+2026-11-17 08:04:08 - info: [BrowserstackCLI] Starting as child process with session ID: 17771cd7-3b90-4184-a60e-749dada6fc71
+2026-11-17 08:04:08 - info: [GrpcClient] Connected to gRPC server at unix:/tmp/sdk-platform-17771cd7-3b90-4184-a60e-749dada6fc71.sock
+2026-11-17 08:04:08 - info: [GrpcClient] Connecting bin session
+2026-11-17 08:04:08 - info: [GrpcClient] ConnectBinSession successful
+2026-11-17 08:04:08 - info: [BrowserstackCLI] loadModules: Loading modules
+2026-11-17 08:04:08 - info: [BrowserstackCLI] loadModules: binSessionId=17771cd7-3b90-4184-a60e-749dada6fc71
+2026-11-17 08:04:08 - info: [BrowserstackCLI] loading Modules.
+2026-11-17 08:04:08 - info: [BrowserstackCLI] Accessibility success=false
+2026-11-17 08:04:08 - info: [GrpcClient] Getting Playwright config
+2026-11-17 08:04:08 - info: [GrpcClient] PlaywrightConfig request successful
+2026-11-17 08:04:08 - warn: [modifyPlaywrightConf] Playwright "video" and "trace" recording are not supported over BrowserStack remote sessions and have been disabled to prevent run failures. Session video is available on the BrowserStack Automate dashboard. The "screenshot" option is unaffected.
+2026-11-17 08:04:08 - [32minfo[39m: [GrpcClient] Sending TestFrameworkEvent
+2026-11-17 08:04:08 - info: [BrowserstackCLI] Starting as child process with session ID: 17771cd7-3b90-4184-a60e-749dada6fc71
+2026-11-17 08:04:08 - info: [BrowserstackCLI] startChild: client and channel already exist, stopping here
+2026-11-17 08:04:08 - [32minfo[39m: [GrpcClient] TestFrameworkEvent request successful
+2026-11-17 08:04:09 - info: [PlaywrightAutomationFramework] trackPlaywrightInstance: created instance for target=23597:0, state=AutomationFrameworkState.CREATE
+2026-11-17 08:04:09 - info: [PlaywrightAutomationFramework] trackPlaywrightInstance: saved instance contextId=84bf57ea403585ccf9e5b183586d096b9235a95a52af6fd967d652177f4d47c9 target=23597:0
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":32.78894472361809,"cgroupExists":false} (5024ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":81.23397827148438,"totalMemory":8589934592} (29ms)
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":26.47427854454203,"cgroupExists":false} (4979ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":80.41572570800781,"totalMemory":8589934592} (29ms)
+2026-11-17 08:04:19 - info: [PlaywrightAutomationFramework] trackPlaywrightInstance: instance already exists
+2026-11-17 08:04:19 - info: [PlaywrightAutomationFramework] trackPlaywrightInstance: instance already exists
+2026-11-17 08:04:19 - info: [GrpcClient] Sending DriverInit
+2026-11-17 08:04:19 - info: [GrpcClient] DriverInit request successful
+2026-11-17 08:04:19 - info: [PlaywrightAutomationFramework] trackPlaywrightInstance: instance already exists
+2026-11-17 08:04:19 - info: [PlaywrightAutomationFramework] trackPlaywrightInstance: instance already exists
+2026-11-17 08:04:19 - info: [GrpcClient] Sending TestSessionEvent
+2026-11-17 08:04:19 - info: [GrpcClient] TestSessionEvent request successful
+2026-11-17 08:04:19 - info: [ObservabilityModule] onBeforeTest: TEST REPORTING AND ANALYTICS sync done
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":28.39195979899497,"cgroupExists":false} (4965ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":80.63888549804688,"totalMemory":8589934592} (31ms)
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":31.53942428035044,"cgroupExists":false} (4971ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":80.89675903320312,"totalMemory":8589934592} (30ms)
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":30.913642052565706,"cgroupExists":false} (4960ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":80.77125549316406,"totalMemory":8589934592} (29ms)
+[[95mpercy:webdriver-utils:captureScreenshot[39m] [Home page - after cookies and popup dismissed] : Starting automate screenshot capture ...
+[[95mpercy:webdriver-utils:captureScreenshot[39m] [Home page - after cookies and popup dismissed] : Created driver ...
+[[95mpercy:webdriver-utils:genericProvider[39m] [Home page - after cookies and popup dismissed] : Preparing to capture screenshots on playwright with automate ...
+[[95mpercy:webdriver-utils:genericProvider[39m] [Home page - after cookies and popup dismissed] : Marking automate session as percy ...
+[[95mpercy:sdk-utils:proxy[39m] Proxying request: https://cdp.browserstack.com:443/wd/hub/session/8095c550d8689a47ffdacc6966bbbe5e6db2f9ed/execute
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":29.536921151439298,"cgroupExists":false} (4990ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":80.413818359375,"totalMemory":8589934592} (32ms)
+[[95mpercy:webdriver-utils:genericProvider[39m] [Home page - after cookies and popup dismissed] : Begin response [object Object]
+[[95mpercy:webdriver-utils:genericProvider[39m] [Home page - after cookies and popup dismissed] : Fetching the debug url ...
+[[95mpercy:webdriver-utils:genericProvider[39m] Starting actual screenshotting phase with Page GUID: page@843eed75a56e73f95244a65d2795c237, Frame GUID: frame@bf3f75edb3270f9035fc686b916e4375
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":48.93350062735258,"cgroupExists":false} (4964ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":81.51531219482422,"totalMemory":8589934592} (25ms)
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":29.05660377358491,"cgroupExists":false} (4943ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":83.11271667480469,"totalMemory":8589934592} (26ms)
+[[95mpercy:webdriver-utils:genericProvider[39m] Response {"sessionId":"8095c550d8689a47ffdacc6966bbbe5e6db2f9ed","status":13,"value":"Error executing browserstack_executor command. [BROWSERSTACK_COMMAND_EXECUTION_FAILED] Something went wrong while executing the command. Please retry and if the error persists, refer to our documentation or reach out to support."}
+Trace: SyntaxError: Unexpected token 'E', "Error exec"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at PlaywrightProvider.getTiles (file:///Users/yashchavan/Desktop/Coding/Roche%20Onsite/node_modules/@percy/webdriver-utils/dist/providers/playwrightProvider.js:95:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async PlaywrightProvider.screenshot (file:///Users/yashchavan/Desktop/Coding/Roche%20Onsite/node_modules/@percy/webdriver-utils/dist/providers/playwrightProvider.js:42:21)
+    at async WebdriverUtils.captureScreenshot (file:///Users/yashchavan/Desktop/Coding/Roche%20Onsite/node_modules/@percy/webdriver-utils/dist/index.js:33:30)
+    at async file:///Users/yashchavan/Desktop/Coding/Roche%20Onsite/node_modules/@percy/core/dist/api.js:311:26
+    at async Server._handleRequest (file:///Users/yashchavan/Desktop/Coding/Roche%20Onsite/node_modules/@percy/core/dist/server.js:359:5)
+    at PlaywrightProvider.screenshot (file:///Users/yashchavan/Desktop/Coding/Roche%20Onsite/node_modules/@percy/webdriver-utils/dist/providers/playwrightProvider.js:68:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async WebdriverUtils.captureScreenshot (file:///Users/yashchavan/Desktop/Coding/Roche%20Onsite/node_modules/@percy/webdriver-utils/dist/index.js:33:30)
+    at async file:///Users/yashchavan/Desktop/Coding/Roche%20Onsite/node_modules/@percy/core/dist/api.js:311:26
+    at async Server._handleRequest (file:///Users/yashchavan/Desktop/Coding/Roche%20Onsite/node_modules/@percy/core/dist/server.js:359:5)
+[[95mpercy:webdriver-utils:captureScreenshot[39m] [Home page - after cookies and popup dismissed] : Error - Unexpected token 'E', "Error exec"... is not valid JSON
+[[95mpercy:webdriver-utils:captureScreenshot[39m] [Home page - after cookies and popup dismissed] : Error Log - SyntaxError: Unexpected token 'E', "Error exec"... is not valid JSON
+[percy:playwright] Could not take percy screenshot "Home page - after cookies and popup dismissed"
+[percy:playwright] Error: Unexpected token 'E', "Error exec"... is not valid JSON
+    at request (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/@percy/sdk-utils/dist/request.js:27:25)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Object.captureAutomateScreenshot (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/@percy/sdk-utils/dist/post-screenshot.js:15:10)
+    at Utils.captureAutomateScreenshot (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/@percy/playwright/utils.js:10:12)
+    at percyScreenshot (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/@percy/playwright/index.js:576:22)
+    at HomePage.captureVisual (/Users/yashchavan/Desktop/Coding/Roche Onsite/pages/HomePage.js:31:5)
+    at Object.<anonymous> (/Users/yashchavan/Desktop/Coding/Roche Onsite/steps/home.steps.js:26:3)
+    at BddStepInvoker.runWithAfterStepHooks (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright-bdd/src/runtime/bddStepInvoker.ts:82:16)
+    at TestStepInfoImpl._runStepBody (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/worker/workerProcessEntry.js:1317:14)
+    at /Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/common/index.js:2404:20
+    at raceAgainstDeadline (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/node_modules/playwright-core/lib/coreBundle.js:4602:10)
+    at /Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/common/index.js:2402:19
+    at _TestTypeImpl._step (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/common/index.js:2399:12)
+    at BddStepInvoker.invoke (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright-bdd/src/runtime/bddStepInvoker.ts:55:5)
+    at /Users/yashchavan/Desktop/Coding/Roche Onsite/.features-gen/features/home.feature.spec.js:15:5
+    at /Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/worker/workerProcessEntry.js:1655:9
+    at /Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/worker/workerProcessEntry.js:1135:11
+    at TimeoutManager.withRunnable (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/worker/workerProcessEntry.js:403:14)
+    at TestInfoImpl._runWithTimeout (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/worker/workerProcessEntry.js:1133:7)
+    at /Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/worker/workerProcessEntry.js:1653:7
+    at WorkerMain._runTest (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/worker/workerProcessEntry.js:1626:5)
+    at WorkerMain.runTestGroup (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/worker/workerProcessEntry.js:1521:9)
+    at process.<anonymous> (/Users/yashchavan/Desktop/Coding/Roche Onsite/node_modules/playwright/lib/common/index.js:1941:25)
+2026-11-17 08:04:50 - info: Automate test case execution has ended. Processing for accessibility testing is underway. 
+2026-11-17 08:04:50 - warn: Not a valid Accessibility Automation session for playwright-page, cannot perform scan with retry.
+2026-11-17 08:04:50 - warn: Not a valid Accessibility Automation session for playwright-page, cannot save accessibility results with retry.
+2026-11-17 08:04:50 - info: Accessibility testing for this test case has ended.
+2026-11-17 08:04:50 - info: [Accessibility] afterTestHook state: accessibilityPlatform=false, bstackA11yShouldScan=true
+2026-11-17 08:04:50 - info: [PlaywrightAutomationFramework] trackPlaywrightInstance: instance already exists
+2026-11-17 08:04:50 - info: [PlaywrightDriverModule] testId: e1191bb514bf0eb70115-cf695eba4071957ed1f7
+2026-11-17 08:04:50 - info: [PlaywrightDriverModule] testData from onAfterTest: {
+  test_framework_name: 'Playwright',
+  test_framework_version: '1.63.0',
+  test_logs: [],
+  test_hooks_finished: {},
+  test_hooks_started: {},
+  test_uuid: 'd4969cb5-9428-50ff-ada1-57434ee15501',
+  test_result: 'pending',
+  automate_session_name: 'LabInsights home page - Visual snapshots of the LabInsights home page',
+  test_file_path: '/Users/yashchavan/Desktop/Coding/Roche Onsite/.features-gen/features/home.feature.spec.js',
+  test_id: 'e1191bb514bf0eb70115-cf695eba4071957ed1f7',
+  test_name: 'Visual snapshots of the LabInsights home page',
+  test_location: '/Users/yashchavan/Desktop/Coding/Roche Onsite/.features-gen/features/home.feature.spec.js',
+  test_code: 'async ({\n' +
+    '    Given,\n' +
+    '    When,\n' +
+    '    Then,\n' +
+    '    And,\n' +
+    '    homePage\n' +
+    '  }) => {\n' +
+    "    await Given('I navigate to the LabInsights home page', null, {\n" +
+    '      homePage\n' +
+    '    });\n' +
+    "    await When('I accept the cookies and close the popup', null, {\n" +
+    '      homePage\n' +
+    '    });\n' +
+    "    await Then('I should see the Subscribe Newsletter button', null, {\n" +
+    '      homePage\n' +
+    '    });\n' +
+    `    await And('I capture a visual snapshot named "Home page - after cookies and popup dismissed"', null, {\n` +
+    '      homePage\n' +
+    '    });\n' +
+    '  }',
+  test_tags: [],
+  test_started_at: '2026-11-17T02:34:08.946Z',
+  test_scope: 'LabInsights home page - Visual snapshots of the LabInsights home page',
+  test_scopes: [ 'LabInsights home page' ],
+  test_rerun_name: ' chrome-latest:Windows 11-browserstack features/home.feature.spec.js LabInsights home page Visual snapshots of the LabInsights home page'
+}
+2026-11-17 08:04:50 - info: [GrpcClient] Sending TestSessionEvent
+2026-11-17 08:04:50 - info: [GrpcClient] TestSessionEvent request successful
+2026-11-17 08:04:50 - info: [PlaywrightDriverModule] markSessionStatusViaRestApi: PUT https://api.browserstack.com/automate/sessions/8095c550d8689a47ffdacc6966bbbe5e6db2f9ed.json status=passed name=features/home.feature.spec.js - LabInsights home page - Visual snapshots of the LabInsights home page
+  ✓  1 [chrome-latest:Windows 11-browserstack] › .features-gen/features/home.feature.spec.js:11:7 › LabInsights home page › Visual snapshots of the LabInsights home page (32.1s)
+2026-11-17 08:04:51 - [32minfo[39m: getting screenshots results.
+2026-11-17 08:04:51 - [32minfo[39m: [GrpcClient] Sending LogCreatedEvent
+2026-11-17 08:04:51 - [32minfo[39m: [GrpcClient] LogCreatedEvent request successful
+2026-11-17 08:04:51 - [32minfo[39m: [GrpcClient] Sending TestFrameworkEvent
+2026-11-17 08:04:51 - [32minfo[39m: [GrpcClient] TestFrameworkEvent request successful
+
+  1 passed (44.6s)
+2026-11-17 08:04:51 - [33mwarn[39m: [ClientTroubleShootingService] Uh-oh! We detected some issues during this run. Error codes: SDK-GEN-004. For details and troubleshooting steps, visit https://www.browserstack.com/docs/test-reporting-and-analytics/sdk-troubleshooting/error-codes?ref=sdk
+2026-11-17 08:04:51 - [32minfo[39m: [BrowserstackCLI] stop: CLI stop triggered
+2026-11-17 08:04:51 - [32minfo[39m: [GrpcClient] Stopping bin session
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":24.592220828105393,"cgroupExists":false} (5007ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":80.11837005615234,"totalMemory":8589934592} (27ms)
+2026-11-17 08:04:54 - [32minfo[39m: [GrpcClient] StopBinSession successful
+2026-11-17 08:04:54 - [32minfo[39m: stop: stopBinSession build_link=https://automate.browserstack.com/dashboard/v2/builds/ed7b46a511d5e872eb668a64da7bf15fbd02769c hashed_id=ed7b46a511d5e872eb668a64da7bf15fbd02769c o11y_uuid=p4cxgcljxpzo6w28rz8zs942bamaq9qzonoimwgr
+2026-11-17 08:04:54 - [32minfo[39m: [BrowserstackCLI] Unconfiguring modules
+2026-11-17 08:04:54 - [32minfo[39m: [BrowserstackCLI] stop: channel closed
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":26.9182389937107,"cgroupExists":false} (4966ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":78.5196304321289,"totalMemory":8589934592} (30ms)
+2026-11-17 08:04:59 - [32minfo[39m: [BrowserstackCLI] stop: shutting down CLI
+2026-11-17 08:04:59 - [32minfo[39m: [BrowserstackCLI] stop: CLI process exited
+2026-11-17 08:04:59 - [32minfo[39m: Visit https://automation.browserstack.com/builds/p4cxgcljxpzo6w28rz8zs942bamaq9qzonoimwgr to view build report, insights, and many more debugging information all at one place!
+
+2026-11-17 08:05:00 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/ed7b46a511d5e872eb668a64da7bf15fbd02769c
+2026-11-17 08:05:01 - [32minfo[39m: SDK run ended for id: cd342549-66f1-4b1e-9bff-62cdab70b466, testhub id: p4cxgcljxpzo6w28rz8zs942bamaq9qzonoimwgr
+2026-11-17 08:05:02 - [32minfo[39m: Deleting /Users/yashchavan/Desktop/Coding/Roche Onsite/playwright-browserstack-sdk.config.js
+2026-11-17 08:05:02 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+[percy:monitoring] cpuInfo: {"cores":8,"currentUsagePercent":22.443890274314214,"cgroupExists":false} (4977ms)
+[percy:monitoring] memoryInfo: {"currentUsagePercent":78.875732421875,"totalMemory":8589934592} (26ms)
+[percy:core:queue] Clearing discovery queue, queued state: 0, pending state: 0 (795ms)
+[percy:core:browser] Closing browser (0ms)
+[percy:core:browser] Browser closed (0ms)
+[percy:core:queue] Clearing snapshot queue, queued state: 0, pending state: 0 (0ms)
+[percy:client] Finalizing build 55541300... (1ms)
+[percy:timer] client:post - build.finalze - 0.372s (372ms)
+[percy:core] Finalized build #7: https://percy.io/9560f98d/web/LabInsights-Roche-Demo-7e4a7497/builds/55541300 (0ms)
+[percy:monitoring] Stopped monitoring system metrics (1ms)
+[percy:core] Detected error for percy build (4ms)
+[percy:core] Failure: Snapshot command was not called (0ms)
+[percy:core] Failure Reason: Snapshot Command was not called. please check your CI for errors (0ms)
+[percy:core] Suggestion: Try using percy snapshot command to take snapshots (0ms)
+[percy:core] Refer to the below Doc Links for the same (0ms)
+[percy:core] * https://www.browserstack.com/docs/percy/take-percy-snapshots/ (0ms)
+[percy:client] Sending Build Logs (186ms)
+[percy:timer] client:post - build.send_logs - 0.44s (440ms)
+[percy:core] Build's CLI and CI logs sent successfully. Please share this log ID with Percy team in case of any issues - 55541300_build_55541300_cli_c504bc2510f673eb5d68007f107ccc998bafa3b5 (0ms)
+[percy:cli:exec] Command "npx browserstack-node-sdk playwright test -g Visual snapshots" exited with status: 0 (1ms)

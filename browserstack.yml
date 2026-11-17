@@ -1,0 +1,31 @@
+# BrowserStack Automate config (used by browserstack-node-sdk)
+# Add your credentials below, or export BROWSERSTACK_USERNAME / BROWSERSTACK_ACCESS_KEY.
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+
+projectName: LabInsights-Roche-Demo
+buildName: labinsights-roche-demo
+buildIdentifier: '#${BUILD_NUMBER}'
+
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: latest
+
+parallelsPerPlatform: 1
+
+browserstackLocal: false
+
+# AI self-healing of broken locators
+selfHeal: false
+
+# Reports, logs and debugging (trimmed while diagnosing the Percy screenshot executor failure)
+debug: false
+networkLogs: false
+consoleLogs: errors
+telemetryLogs: false
+testObservability: true
+
+# Percy for Node Playwright runs via the Percy CLI wrapper (see "test:percy" in package.json),
+# not via a percy flag here. Snapshots are taken with percyScreenshot in the page objects.
