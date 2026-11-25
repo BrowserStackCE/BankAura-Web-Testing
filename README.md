@@ -1,46 +1,40 @@
-# LabInsights Playwright BDD Template
+# BankAura – Playwright BDD automation
 
-Playwright + BDD (`playwright-bdd`) template that opens https://stage.labinsights.com/, with BrowserStack Automate integrated.
+Playwright + BDD (`playwright-bdd`) tests for the BankAura demo app (https://bankaura.vercel.app/), runnable locally and on BrowserStack Automate.
 
 ## Setup
 
 ```bash
-git clone <repo-url>
-cd <repo-folder>
-npm i
-npx playwright install chromium
+npm install
 ```
 
-Add your BrowserStack credentials in `browserstack.yml`:
-
-```yml
-userName: YOUR_USERNAME
-accessKey: YOUR_ACCESS_KEY
-```
-
-(Or export `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY` instead. Don't commit real keys.)
-
-## Run
-
-Locally:
+Credentials are never stored in the repo. Export them before cloud runs:
 
 ```bash
-npm test
+export BROWSERSTACK_USERNAME=<your username>
+export BROWSERSTACK_ACCESS_KEY=<your access key>
 ```
 
-On BrowserStack Automate:
+`BASE_URL` can be set to point the tests at a different environment (defaults to https://bankaura.vercel.app/).
 
-```bash
-npm run test:browserstack
-```
+## Running tests
 
-Results appear on the [Automate dashboard](https://automate.browserstack.com/).
+| Command                     | What it does                                         |
+| --------------------------- | ---------------------------------------------------- |
+| `npm run bddgen`            | Generate Playwright specs from the feature files     |
+| `npm test`                  | Generate and run locally (Chromium)                  |
+| `npm run test:browserstack` | Generate and run on all BrowserStack platforms below |
 
-## Structure
+## BrowserStack platforms
 
-- `features/` – Gherkin feature files
-- `steps/` – step definitions
-- `pages/` – page objects
-- `fixtures/` – registers page objects as fixtures
-- `browserstack.yml` – BrowserStack config (browsers, build name)
-- `.testcompanionrules/` – Test Companion rules and skills
+- Windows 11 – Chrome (latest)
+- Windows 11 – Firefox (latest)
+- macOS Sonoma – Safari / WebKit (latest)
+- Samsung Galaxy S23 (Android 13) – Chrome, real device
+
+## Scenarios
+
+Feature: BankAura demo login and Banking tab. Each scenario starts by opening the landing page, going to Sign In and logging in with the demo account.
+
+1. **Demo account login lands on the dashboard overview** – the URL is `/dashboard`, the heading reads "Welcome back, demo_account", and the sidebar shows the Banking item.
+2. **Banking tab shows the account overview** – after opening Banking, the heading and subtitle show, the account balance and transactions are listed, and all six sub-tabs (Accounts, Transfer, Beneficiaries, Bill Pay, Cards, Statements) are available.
