@@ -1,10 +1,18 @@
 const { test: base, createBdd } = require("playwright-bdd");
-const { HomePage } = require("../pages/HomePage");
+const { LoginPage } = require("../pages/LoginPage");
+const { DashboardPage } = require("../pages/DashboardPage");
+const { BankingPage } = require("../pages/BankingPage");
 
 // Register every page object here so step definitions can request them as fixtures.
 const test = base.extend({
-  homePage: async ({ page }, use) => {
-    await use(new HomePage(page));
+  loginPage: async ({ page }, use) => {
+    await use(new LoginPage(page));
+  },
+  dashboardPage: async ({ page }, use) => {
+    await use(new DashboardPage(page));
+  },
+  bankingPage: async ({ page }, use) => {
+    await use(new BankingPage(page));
   },
 });
 
