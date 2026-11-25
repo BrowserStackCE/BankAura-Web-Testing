@@ -12,7 +12,7 @@ module.exports = defineConfig({
   retries: 0,
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
-    baseURL: process.env.BASE_URL || "https://stage.labinsights.com/",
+    baseURL: process.env.BASE_URL || "https://bankaura.vercel.app/",
     trace: "on-first-retry",
     headless: false,
   },

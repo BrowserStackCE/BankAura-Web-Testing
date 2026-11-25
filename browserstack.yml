@@ -3,29 +3,54 @@
 userName: ${BROWSERSTACK_USERNAME}
 accessKey: ${BROWSERSTACK_ACCESS_KEY}
 
-projectName: LabInsights-Roche-Demo
-buildName: labinsights-roche-demo
+projectName: BankAura - Web Testing
+buildName: bank-aura
 buildIdentifier: '#${BUILD_NUMBER}'
 
 platforms:
+  # Desktop browsers (full-width resolution)
   - os: Windows
     osVersion: 11
     browserName: chrome
     browserVersion: latest
+  - os: Windows
+    osVersion: 11
+    browserName: playwright-firefox
+    browserVersion: latest
+  - os: OS X
+    osVersion: Sonoma
+    browserName: playwright-webkit
+    browserVersion: latest
+  # Mobile device (real device)
+  - deviceName: Samsung Galaxy S23
+    osVersion: 13.0
+    browserName: chrome
+    deviceOrientation: portrait
 
 parallelsPerPlatform: 1
+
+# Full-width desktop screen resolution for every desktop session
+resolution: 1920x1080
+
+# Accessibility testing (runs on Chrome / Edge sessions)
+# accessibility: true
+# accessibilityOptions:
+#   wcagVersion: wcag21aa
+#   includeIssueType:
+#     bestPractice: true
+#     needsReview: true
 
 browserstackLocal: false
 
 # AI self-healing of broken locators
-selfHeal: false
+selfHeal: true
 
 # Reports, logs and debugging (trimmed while diagnosing the Percy screenshot executor failure)
-debug: false
-networkLogs: false
+debug: true
+networkLogs: true
 consoleLogs: errors
-telemetryLogs: false
+telemetryLogs: true
 testObservability: true
 
-# Percy for Node Playwright runs via the Percy CLI wrapper (see "test:percy" in package.json),
-# not via a percy flag here. Snapshots are taken with percyScreenshot in the page objects.
+browserProfiling: true
+
