@@ -10,6 +10,12 @@ class DashboardPage extends BasePage {
     this.overviewNav = page.getByTestId("nav-overview");
     this.bankingNav = page.getByTestId("nav-banking");
     this.signOutButton = page.getByRole("button", { name: "Sign Out" });
+    // Intentionally incorrect test id (real one is nav-banking) - used by the on-purpose failing scenario
+    this.incorrectBankingNav = page.getByTestId("nav-banking-wrong");
+  }
+
+  async openBankingUsingIncorrectLocator() {
+    await this.incorrectBankingNav.click({ timeout: 5000 });
   }
 
   async openBanking() {

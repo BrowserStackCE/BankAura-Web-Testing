@@ -44,6 +44,13 @@ When("I open the Banking tab", async ({ page, dashboardPage, bankingPage }) => {
   });
 });
 
+When(
+  "I click the Banking item in the sidebar using an incorrect locator",
+  async ({ dashboardPage }) => {
+    await dashboardPage.openBankingUsingIncorrectLocator();
+  },
+);
+
 Then(
   "the Banking page heading and subtitle are shown",
   async ({ bankingPage }) => {
